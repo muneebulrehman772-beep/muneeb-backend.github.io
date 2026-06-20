@@ -1,9 +1,7 @@
-const express = require('express');
-const cors = require('cors');
+const express = require('express');const cors = require('cors');
 const { initializeApp, cert } = require('firebase-admin/app');
 const { getDatabase } = require('firebase-admin/database');
-const serviceAccount = require('./serviceAccountKey.json');
-
+const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
 const app = express();
 const PORT = 3000;
 
